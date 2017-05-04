@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+<div class="box">
+    <table class="table-bordered">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>班级</th>
+            <th>操作</th>
+        </tr>
+        <tr ng-repeat="item in data">
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.sex}}</td>
+            <td>{{item.classes}}</td>
+            <td>
+                <a href="" ng-click="del(item.id)">删除</a>
+                <a href="#!/edit/{{item.id}}">编辑</a>
+            </td>
+        </tr>
+    </table>
+    <a href="#!/add" class="add">添加</a>
+</div>
+</body>
+</html>

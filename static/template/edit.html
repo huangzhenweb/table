@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/edit.css">
+</head>
+<body>
+<form>
+    <a href="#!/">返回</a><br>
+    姓名：<input type="text" name="name" ng-model="current.name"><br><br>
+    年龄：<input type="text" name="age" ng-model="current.age"><br><br>
+    性别：男：<input type="radio" name="sex" value="1" ng-checked="current.sex==1" ng-model="current.sex">
+        女：<input type="radio" name="sex" value="2" ng-checked="current.sex==2" ng-model="current.sex">
+        保密：<input type="radio" name="sex" value="3" ng-checked="current.sex==3" ng-model="current.sex"><br><br>
+    班级：<input type="text" name="classes" ng-model="current.classes"><br><br>
+    <input type="submit" value="提交" ng-click="submit(current.id)">
+</form>
+</body>
+</html>

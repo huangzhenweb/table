@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/edit.css">
+    <style>
+        .view-animation.ng-enter, .view-animation.ng-leave {
+            transition:0.5s linear all;
+            position:fixed;
+            left:0;
+            top:50px;
+            width:100%;
+        }
+        .view-animation.ng-enter {
+            transform:translateY(100%);
+        }
+        .view-animation.ng-leave,
+        .view-animation.ng-enter.ng-enter-active {
+            transform:translateY(0%);
+        }
+        .view-animation.ng-leave.ng-leave-active {
+            transform:translateY(-100%);
+        }
+    </style>
+</head>
+<body>
+<form action="">
+<a href="#!/">返回</a><br>
+姓名：<input type="text"  ng-model="name"><br><br>
+年龄：<input type="text" ng-model="age"><br><br>
+性别：男：<input type="radio" value="1" ng-model="sex" ng-checked="sex==1">
+女：<input type="radio"  value="2" ng-model="sex" ng-checked="sex==2">
+保密：<input type="radio" value="3" ng-model="sex" ng-checked="sex==3"><br><br>
+班级：<input type="text"  ng-model="classes"><br><br>
+<!--<input type="submit" value="完成" ng-click="addData()">-->
+    <a href="#!/" ng-click="addData()" class="add">完成</a>
+</form>
+</body>
+</html>

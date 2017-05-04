@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生管理系统实现增删改查</title>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-route.min.js"></script>
+    <script src="/js/angular-animate.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/route.js"></script>
+    <script src="/js/controller.js"></script>
+    <style>
+        .view-animation.ng-enter, .view-animation.ng-leave {
+            transition:0.5s linear all;
+            position:fixed;
+            left:0;
+            top:50px;
+            width:100%;
+        }
+        .view-animation.ng-enter {
+            transform:translateX(100%);
+        }
+        .view-animation.ng-leave,
+        .view-animation.ng-enter.ng-enter-active {
+            transform:translateX(0%);
+        }
+        .view-animation.ng-leave.ng-leave-active {
+            transform:translateX(-100%);
+        }
+    </style>
+</head>
+<!--这个是主页面，在页面不跳转的情况下通过这个页面显示不同页面的内容，-->
+<body ng-app="myapp">
+    <div ng-view class="view-animation"></div>
+<!--ng-view这个是用来展示内容的  class="view-animation"这个是加动画的类名-->
+
+</body>
+</html>
